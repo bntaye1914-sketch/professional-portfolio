@@ -1,0 +1,60 @@
+# Ta'ye Bailey | Professional Portfolio
+
+**Senior Grant Strategy Consultant | Federal Grants Management | Lean Six Sigma**
+
+20+ years managing federal grants portfolios ($45M–$1.1B) across DoD, VA, GSA, DHS, and higher education institutions.
+
+Marine Corps Veteran | Top Secret Clearance Eligible | MBA, MSHE
+
+---
+
+## 🎯 Core Expertise
+
+- Federal Grants Management (2 CFR 200, FAR/DFARS, OMB circulars)
+- Capital Infrastructure Program Administration ($50M+ portfolios)
+- Lean Six Sigma Process Improvement
+- AI-Enabled Workflow Optimization
+- Compliance & Audit Readiness
+
+---
+
+## 📂 Portfolio Contents
+
+### Case Studies
+
+- **[AI-Enabled Process Improvement in Higher Education Operations](case-studies/ai-process-improvement-higher-ed.md)**
+  * Lean Six Sigma + AI workflow design | Estimated 30–40% cycle time reduction
+
+### Automation Projects
+
+- **[GitHub Actions Job Monitoring System](automation-projects/job-monitoring-system.md)**
+  * Automated USAJobs/LinkedIn scanner | 52 grants positions found on first run
+
+- **[Notion API Integration for Project Management](automation-projects/notion-api-integration.md)**
+  * Consolidated 100+ pages to 45–50 through systematic automation
+
+### Certifications & Training
+
+- **[Lean Six Sigma Green Belt](certifications/lean-six-sigma-green-belt.md)** | January 2025
+- **[Google AI Essentials](certifications/google-ai-essentials.md)** | January 2025
+
+---
+
+## 🔗 Connect
+
+- **LinkedIn:** [Your LinkedIn URL]
+- **Email:** [Your Email]
+- **Location:** Baltimore, MD (Open to DC/DMV positions)
+
+---
+
+## 💼 Currently Seeking
+
+Capital grants management positions ($50M+ portfolios) at federal agencies in the DC/DMV area.
+
+**Target Agencies:** GSA, VA, DHS, DoD, Department of Education
+
+---
+
+**Last Updated:** January 2025
+**Repository:** Public | Maintained by Ta'ye Bailey
