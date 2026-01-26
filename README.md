@@ -52,9 +52,24 @@ Marine Corps Veteran | Top Secret Clearance Eligible | MBA, MSHE
 
 Capital grants management positions ($50M+ portfolios) at federal agencies in the DC/DMV area.
 
-**Target Agencies:** GSA, VA, DHS, DoD, Department of Education
+### 🎯 Target Roles
 
----
+- Senior Grant Strategy Consultant
+- - Federal Grants Manager (Capital & Infrastructure)
+  - - Grants Modernization / Process Improvement Lead
+    - - Director of Grants Administration
+     
+      - ### 🏛️ Target Organizations
+     
+      - **Federal Agencies:**
+      - - GSA, VA, DHS, DoD, Department of Education
+       
+        - **Nonprofit & Philanthropy:**
+        - - Kresge Foundation, Ford Foundation, Robert Wood Johnson Foundation
+          - - National Council of Nonprofits, United Way Worldwide
+            - - Large health systems and higher-ed institutions with $50M+ grant portfolios
+
+--
 
 **Last Updated:** January 2025
 **Repository:** Public | Maintained by Ta'ye Bailey
