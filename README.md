@@ -42,9 +42,9 @@ Marine Corps Veteran | Top Secret Clearance Eligible | MBA, MSHE
 
 ## 🔗 Connect
 
-- **LinkedIn:** [Your LinkedIn URL]
-- **Email:** [Your Email]
-- **Location:** Baltimore, MD (Open to DC/DMV positions)
+- **LinkedIn:** [linkedin.com/in/tayebailey](https://www.linkedin.com/in/tayebailey)
+- **Email:** bntaye1914@gmail.com
+- **Location:** Washington, DC (Open to DC/DMV positions)
 
 ---
 
