@@ -85,115 +85,56 @@
 
         .hero-rule {
             display: flex;
-            align-items: center;
-            gap: 16px;
-            max-width: 480px;
-            margin: 0 auto 24px;
-            position: relative;
+            align-items: center; gap: 16px; max-width: 480px; margin: 0 auto 24px; position: relative;
         }
 
         .hero-rule::before, .hero-rule::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--amber), transparent);
+            content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--amber), transparent);
         }
 
         .hero-rule span {
-            color: var(--gold);
-            font-size: 14px;
+            color: var(--gold); font-size: 14px;
         }
 
         .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(30px, 6.5vw, 68px);
-            font-weight: 700;
-            color: var(--parch);
-            line-height: 1.1;
-            margin-bottom: 10px;
-            position: relative;
+            font-family: 'Playfair Display', serif; font-size: clamp(30px, 6.5vw, 68px); font-weight: 700; color: var(--parch); line-height: 1.1; margin-bottom: 10px; position: relative;
         }
 
         .hero-title em {
-            font-style: italic;
-            font-weight: 400;
-            color: var(--gold-lt);
+            font-style: italic; font-weight: 400; color: var(--gold-lt);
         }
 
         .hero-sub {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: clamp(14px, 2.5vw, 20px);
-            color: var(--ink-ghost);
-            margin-bottom: 28px;
-            position: relative;
+            font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(14px, 2.5vw, 20px); color: var(--ink-ghost); margin-bottom: 28px; position: relative;
         }
 
         .hero-desc {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 16px;
-            color: var(--ink-ghost);
-            max-width: 540px;
-            margin: 0 auto;
-            line-height: 1.7;
-            position: relative;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 16px; color: var(--ink-ghost); max-width: 540px; margin: 0 auto; line-height: 1.7; position: relative;
         }
 
         /* LAUNCH */
         #launchSection {
-            background: var(--bark);
-            padding: 52px 24px;
-            text-align: center;
-            border-top: 1px solid rgba(192, 120, 40, 0.18);
-            border-bottom: 1px solid rgba(192, 120, 40, 0.18);
+            background: var(--bark); padding: 52px 24px; text-align: center; border-top: 1px solid rgba(192, 120, 40, 0.18); border-bottom: 1px solid rgba(192, 120, 40, 0.18);
         }
 
         .launch-prompt {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 18px;
-            color: var(--parch3);
-            margin-bottom: 28px;
-            line-height: 1.6;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 18px; color: var(--parch3); margin-bottom: 28px; line-height: 1.6;
         }
 
         .launch-prompt small {
-            display: block;
-            font-size: 13px;
-            color: var(--ink-ghost);
-            margin-top: 6px;
+            display: block; font-size: 13px; color: var(--ink-ghost); margin-top: 6px;
         }
 
         .begin-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 52px;
-            background: var(--amber);
-            color: var(--deep);
-            font-family: 'Playfair Display', serif;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 2px;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-            box-shadow: 0 4px 24px rgba(192, 120, 40, 0.28);
+            display: inline-flex; align-items: center; gap: 10px; padding: 16px 52px; background: var(--amber); color: var(--deep); font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 24px rgba(192, 120, 40, 0.28);
         }
 
         .begin-btn:hover:not(:disabled) {
-            background: var(--gold);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 36px rgba(192, 120, 40, 0.40);
+            background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 36px rgba(192, 120, 40, 0.40);
         }
 
         .begin-btn:disabled {
-            opacity: 0.45;
-            cursor: not-allowed;
-            transform: none;
+            opacity: 0.45; cursor: not-allowed; transform: none;
         }
 
         .begin-btn .bi {
@@ -201,19 +142,7 @@
         }
 
         .error-msg {
-            display: none;
-            margin-top: 20px;
-            padding: 16px 24px;
-            background: rgba(130, 24, 8, 0.18);
-            border: 1px solid rgba(130, 24, 8, 0.40);
-            border-radius: 2px;
-            font-family: 'Crimson Pro', serif;
-            font-size: 15px;
-            color: #e09070;
-            max-width: 560px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.5;
+            display: none; margin-top: 20px; padding: 16px 24px; background: rgba(130, 24, 8, 0.18); border: 1px solid rgba(130, 24, 8, 0.40); border-radius: 2px; font-family: 'Crimson Pro', serif; font-size: 15px; color: #e09070; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.5;
         }
 
         .error-msg.show {
@@ -222,10 +151,7 @@
 
         /* PROGRESS */
         #progressSection {
-            display: none;
-            background: var(--soil);
-            padding: 56px 24px;
-            text-align: center;
+            display: none; background: var(--soil); padding: 56px 24px; text-align: center;
         }
 
         #progressSection.show {
@@ -233,57 +159,27 @@
         }
 
         .prog-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 20px;
-            color: var(--gold-lt);
-            margin-bottom: 36px;
+            font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: var(--gold-lt); margin-bottom: 36px;
         }
 
         .prog-track {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 4px;
-            max-width: 760px;
-            margin: 0 auto 32px;
+            display: flex; align-items: flex-start; justify-content: center; flex-wrap: wrap; gap: 4px; max-width: 760px; margin: 0 auto 32px;
         }
 
         .p-node {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
+            display: flex; flex-direction: column; align-items: center; gap: 6px;
         }
 
         .p-dot {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 2px solid var(--ink-fade);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 11px;
-            color: var(--ink-fade);
-            transition: all 0.45s ease;
+            width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--ink-fade); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 11px; color: var(--ink-fade); transition: all 0.45s ease;
         }
 
         .p-dot.active {
-            border-color: var(--amber);
-            color: var(--amber);
-            animation: pulse 1.4s ease-in-out infinite;
+            border-color: var(--amber); color: var(--amber); animation: pulse 1.4s ease-in-out infinite;
         }
 
         .p-dot.done {
-            background: var(--amber);
-            border-color: var(--amber);
-            color: var(--deep);
-            font-weight: 700;
-            animation: none;
-            box-shadow: none;
+            background: var(--amber); border-color: var(--amber); color: var(--deep); font-weight: 700; animation: none; box-shadow: none;
         }
 
         @keyframes pulse {
@@ -292,23 +188,11 @@
         }
 
         .p-label {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 10px;
-            color: var(--ink-ghost);
-            white-space: nowrap;
-            max-width: 52px;
-            text-align: center;
-            line-height: 1.3;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 10px; color: var(--ink-ghost); white-space: nowrap; max-width: 52px; text-align: center; line-height: 1.3;
         }
 
         .p-line {
-            width: 24px;
-            height: 2px;
-            background: var(--ink-fade);
-            border-radius: 1px;
-            transition: background 0.45s;
-            margin-top: 19px;
+            width: 24px; height: 2px; background: var(--ink-fade); border-radius: 1px; transition: background 0.45s; margin-top: 19px;
         }
 
         .p-line.lit {
@@ -316,17 +200,11 @@
         }
 
         .prog-status {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 16px;
-            color: var(--parch3);
-            min-height: 28px;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 16px; color: var(--parch3); min-height: 28px;
         }
 
         .quill {
-            display: inline-block;
-            animation: sway 1.1s ease-in-out infinite;
-            margin-right: 6px;
+            display: inline-block; animation: sway 1.1s ease-in-out infinite; margin-right: 6px;
         }
 
         @keyframes sway {
@@ -345,41 +223,24 @@
 
         /* Epigraph */
         .epigraph-page {
-            background: #090604;
-            padding: 72px 24px 68px;
-            text-align: center;
-            border-bottom: 1px solid rgba(192, 120, 40, 0.15);
+            background: #090604; padding: 72px 24px 68px; text-align: center; border-bottom: 1px solid rgba(192, 120, 40, 0.15);
         }
 
         .epigraph-text {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: clamp(17px, 2.8vw, 22px);
-            color: var(--gold-lt);
-            max-width: 560px;
-            margin: 0 auto 16px;
-            line-height: 1.75;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: clamp(17px, 2.8vw, 22px); color: var(--gold-lt); max-width: 560px; margin: 0 auto 16px; line-height: 1.75;
         }
 
         .epigraph-attr {
-            font-family: 'Playfair Display', serif;
-            font-size: 12px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--ink-ghost);
+            font-family: 'Playfair Display', serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-ghost);
         }
 
         /* Chapters */
         .ch-band {
-            position: relative;
-            opacity: 0;
-            transform: translateY(18px);
-            transition: opacity 0.85s ease, transform 0.85s ease;
+            position: relative; opacity: 0; transform: translateY(18px); transition: opacity 0.85s ease, transform 0.85s ease;
         }
 
         .ch-band.revealed {
-            opacity: 1;
-            transform: none;
+            opacity: 1; transform: none;
         }
 
         .ch-band:nth-child(odd) {
@@ -387,210 +248,106 @@
         }
 
         .ch-band:nth-child(even) {
-            background: #f0e5ca;
-            color: var(--ink);
+            background: #f0e5ca; color: var(--ink);
         }
 
         .ch-inner {
-            max-width: 760px;
-            margin: 0 auto;
-            padding: 64px 48px 72px;
-            position: relative;
+            max-width: 760px; margin: 0 auto; padding: 64px 48px 72px; position: relative;
         }
 
         .ch-inner::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 48px;
-            bottom: 48px;
-            width: 3px;
-            background: linear-gradient(180deg, transparent, var(--amber) 40%, var(--amber) 60%, transparent);
-            opacity: 0.35;
+            content: ''; position: absolute; left: 0; top: 48px; bottom: 48px; width: 3px; background: linear-gradient(180deg, transparent, var(--amber) 40%, var(--amber) 60%, transparent); opacity: 0.35;
         }
 
         .ch-meta {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 18px;
-            flex-wrap: wrap;
+            display: flex; align-items: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap;
         }
 
         .ch-num {
-            font-family: 'Playfair Display', serif;
-            font-size: 10px;
-            font-weight: 700;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
-            color: var(--ink-ghost);
+            font-family: 'Playfair Display', serif; font-size: 10px; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-ghost);
         }
 
         .ch-band:nth-child(even) .ch-num { color: var(--ink-fade); }
 
         .ch-era {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 12px;
-            padding: 3px 12px;
-            border-radius: 20px;
-            color: var(--gold);
-            border: 1px solid rgba(192, 120, 40, 0.35);
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 12px; padding: 3px 12px; border-radius: 20px; color: var(--gold); border: 1px solid rgba(192, 120, 40, 0.35);
         }
 
         .ch-band:nth-child(even) .ch-era { color: var(--ink-soft); border-color: rgba(74, 46, 16, 0.3); }
 
         .ch-rule {
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, rgba(192, 120, 40, 0.3), transparent);
+            flex: 1; height: 1px; background: linear-gradient(90deg, rgba(192, 120, 40, 0.3), transparent);
         }
 
         .ch-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(20px, 3.5vw, 32px);
-            font-weight: 700;
-            line-height: 1.22;
-            margin-bottom: 28px;
+            font-family: 'Playfair Display', serif; font-size: clamp(20px, 3.5vw, 32px); font-weight: 700; line-height: 1.22; margin-bottom: 28px;
         }
 
         .ch-band:nth-child(odd) .ch-title { color: var(--gold-lt); }
         .ch-band:nth-child(even) .ch-title { color: var(--ink); }
 
         .ch-body {
-            font-family: 'Crimson Pro', serif;
-            font-size: clamp(16.5px, 2vw, 18.5px);
-            line-height: 1.84;
-            text-align: justify;
-            hyphens: auto;
+            font-family: 'Crimson Pro', serif; font-size: clamp(16.5px, 2vw, 18.5px); line-height: 1.84; text-align: justify; hyphens: auto;
         }
 
         .ch-band:nth-child(odd) .ch-body { color: #d4c4a0; }
         .ch-band:nth-child(even) .ch-body { color: var(--ink-mid); }
 
         .ch-body p {
-            margin-bottom: 20px;
-            text-indent: 2.4em;
+            margin-bottom: 20px; text-indent: 2.4em;
         }
 
         .ch-body p:first-child { text-indent: 0; }
 
         .ch-body p:first-child::first-letter {
-            font-family: 'Playfair Display', serif;
-            font-size: 78px;
-            font-weight: 700;
-            float: left;
-            line-height: 0.72;
-            padding-right: 10px;
-            padding-top: 8px;
-            color: var(--amber);
+            font-family: 'Playfair Display', serif; font-size: 78px; font-weight: 700; float: left; line-height: 0.72; padding-right: 10px; padding-top: 8px; color: var(--amber);
         }
 
         .ch-band:nth-child(even) .ch-body p:first-child::first-letter { color: var(--flame); }
 
         .ch-divider {
-            height: 8px;
-            background: repeating-linear-gradient(90deg,
-                var(--kg) 0 10px,
-                var(--gold) 10px 20px,
-                var(--kr) 20px 30px,
-                var(--deep) 30px 40px
-            );
-            opacity: 0.55;
+            height: 8px; background: repeating-linear-gradient(90deg, var(--kg) 0 10px, var(--gold) 10px 20px, var(--kr) 20px 30px, var(--deep) 30px 40px ); opacity: 0.55;
         }
 
         /* FINALE */
         #finale {
-            display: none;
-            background: var(--bark);
-            padding: 88px 24px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
+            display: none; background: var(--bark); padding: 88px 24px; text-align: center; position: relative; overflow: hidden;
         }
 
         #finale.show { display: block; }
 
         #finale::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at center, rgba(192, 120, 40, 0.08), transparent 70%);
-            pointer-events: none;
+            content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(192, 120, 40, 0.08), transparent 70%); pointer-events: none;
         }
 
         .fin-stars {
-            font-size: 22px;
-            letter-spacing: 18px;
-            color: var(--gold);
-            opacity: 0.55;
-            margin-bottom: 28px;
+            font-size: 22px; letter-spacing: 18px; color: var(--gold); opacity: 0.55; margin-bottom: 28px;
         }
 
         .fin-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: clamp(18px, 3.5vw, 30px);
-            font-weight: 400;
-            color: var(--gold-lt);
-            max-width: 600px;
-            margin: 0 auto 24px;
-            line-height: 1.4;
-            position: relative;
+            font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(18px, 3.5vw, 30px); font-weight: 400; color: var(--gold-lt); max-width: 600px; margin: 0 auto 24px; line-height: 1.4; position: relative;
         }
 
         .fin-body {
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 16px;
-            color: var(--parch3);
-            max-width: 520px;
-            margin: 0 auto 40px;
-            line-height: 1.85;
-            position: relative;
+            font-family: 'IM Fell English', serif; font-style: italic; font-size: 16px; color: var(--parch3); max-width: 520px; margin: 0 auto 40px; line-height: 1.85; position: relative;
         }
 
         .restart-btn {
-            display: inline-block;
-            padding: 12px 40px;
-            border: 1px solid var(--amber);
-            color: var(--amber);
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 16px;
-            cursor: pointer;
-            background: transparent;
-            border-radius: 2px;
-            transition: background 0.2s, color 0.2s;
-            position: relative;
+            display: inline-block; padding: 12px 40px; border: 1px solid var(--amber); color: var(--amber); font-family: 'IM Fell English', serif; font-style: italic; font-size: 16px; cursor: pointer; background: transparent; border-radius: 2px; transition: background 0.2s, color 0.2s; position: relative;
         }
 
         .restart-btn:hover {
-            background: rgba(192, 120, 40, 0.12);
-            color: var(--gold-lt);
+            background: rgba(192, 120, 40, 0.12); color: var(--gold-lt);
         }
 
         /* FOOTER */
         .footer {
-            background: var(--deep);
-            padding: 20px 24px;
-            text-align: center;
-            font-family: 'IM Fell English', serif;
-            font-style: italic;
-            font-size: 12px;
-            color: var(--ink-fade);
-            letter-spacing: 0.07em;
+            background: var(--deep); padding: 20px 24px; text-align: center; font-family: 'IM Fell English', serif; font-style: italic; font-size: 12px; color: var(--ink-fade); letter-spacing: 0.07em;
         }
 
         /* CURSOR */
         .cursor {
-            display: inline-block;
-            width: 2px;
-            height: 1.05em;
-            background: var(--amber);
-            vertical-align: text-bottom;
-            margin-left: 1px;
-            animation: blink 0.75s step-end infinite;
+            display: inline-block; width: 2px; height: 1.05em; background: var(--amber); vertical-align: text-bottom; margin-left: 1px; animation: blink 0.75s step-end infinite;
         }
 
         @keyframes blink {
@@ -666,7 +423,7 @@
         /* API */
         async function callClaude(messages, system) {
             var body = {
-                model: "claude-3-5-sonnet-20240620",
+                model: "claude-3-5-sonnet-latest",
                 max_tokens: 1000,
                 messages: messages
             };
@@ -674,7 +431,7 @@
 
             return fetch('https://api.anthropic.com/v1/messages', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', 'x-api-key': 'YOUR_API_KEY_HERE', 'anthropic-dangerous-direct-browser-access': 'true' },
                 body: JSON.stringify(body)
             })
             .then(function(res) { return res.json(); })
@@ -760,7 +517,9 @@
         function fillChapter(n, rawText) {
             var container = document.getElementById('body-' + n);
             if (!container) return;
-            var paras = rawText.split(/\n\s*\n/).map(function(p) { return p.replace(/\s+/g, ' ').trim(); }).filter(function(p) { return p.length > 0; });
+            var paras = rawText.split(/
+\s*
+/).map(function(p) { return p.replace(/\s+/g, ' ').trim(); }).filter(function(p) { return p.length > 0; });
             container.innerHTML = paras.map(function(p) { return '<p>' + esc(p) + '</p>'; }).join('');
         }
 
@@ -818,7 +577,15 @@
                     if (band) band.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
                     var continuity = previousTail ? ("Previous chapter ended with: '" + previousTail + "'. Transition naturally.") : "";
-                    var prompt = "Thematic thread: " + outline.thematicThread + "\n\nWriting Chapter " + ch.n + " of 7.\nTitle: " + ch.title + "\nEra: " + ch.era + "\nMust cover: " + ch.brief + "\n" + continuity + "\n\nWrite 4-5 paragraphs of historically grounded literary prose. Plain paragraphs only. No headers.";
+                    var prompt = "Thematic thread: " + outline.thematicThread + "
+
+Writing Chapter " + ch.n + " of 7.
+Title: " + ch.title + "
+Era: " + ch.era + "
+Must cover: " + ch.brief + "
+" + continuity + "
+
+Write 4-5 paragraphs of historically grounded literary prose. Plain paragraphs only. No headers.";
                     
                     var chText = await callClaude([ { role: "user", content: prompt } ], SYSTEM);
                     fillChapter(ch.n, chText);
