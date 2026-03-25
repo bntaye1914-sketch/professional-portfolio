@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Were Always Destined to Be Here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep: #0b0704;
+            --soil: #181008;
+            --bark: #271608;
+            --parch: #f3e8ce;
+            --parch2: #ede0bb;
+            --parch3: #e6d5a8;
+            --amber: #c07828;
+            --gold: #d4a840;
+            --gold-lt: #e8c868;
+            --ink: #0e0904;
+            --ink-mid: #291808;
+            --ink-soft: #4a2e10;
+            --ink-fade: #7a5828;
+            --ink-ghost: #a88048;
+            --flame: #b84018;
+            --kg: #2a5224;
+            --kr: #821808;
+        }
+
+        *, ::before, ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--deep);
+            color: var(--parch);
+            font-family: 'Crimson Pro', Georgia, serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* KENTE */
+        .kente {
+            height: 12px;
+            background: repeating-linear-gradient(90deg,
+                var(--kg) 0 12px,
+                var(--gold) 12px 24px,
+                var(--kr) 24px 36px,
+                var(--deep) 36px 48px
+            );
+        }
+
+        /* HERO */
+        .hero {
+            background: var(--soil);
+            padding: 72px 24px 64px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 50% 60%, rgba(192, 120, 40, 0.10) 0%, transparent 68%);
+            pointer-events: none;
+        }
+
+        .hero-eye {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 13px;
+            letter-spacing: 0.22em;
+            color: var(--gold);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero-rule {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            max-width: 480px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+
+        .hero-rule::before, .hero-rule::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--amber), transparent);
+        }
+
+        .hero-rule span {
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px, 6.5vw, 68px);
+            font-weight: 700;
+            color: var(--parch);
+            line-height: 1.1;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--gold-lt);
+        }
+
+        .hero-sub {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(14px, 2.5vw, 20px);
+            color: var(--ink-ghost);
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .hero-desc {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--ink-ghost);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        /* LAUNCH */
+        #launchSection {
+            background: var(--bark);
+            padding: 52px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(192, 120, 40, 0.18);
+            border-bottom: 1px solid rgba(192, 120, 40, 0.18);
+        }
+
+        .launch-prompt {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: var(--parch3);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .launch-prompt small {
+            display: block;
+            font-size: 13px;
+            color: var(--ink-ghost);
+            margin-top: 6px;
+        }
+
+        .begin-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 52px;
+            background: var(--amber);
+            color: var(--deep);
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 24px rgba(192, 120, 40, 0.28);
+        }
+
+        .begin-btn:hover:not(:disabled) {
+            background: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 36px rgba(192, 120, 40, 0.40);
+        }
+
+        .begin-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .begin-btn .bi {
+            font-size: 18px;
+        }
+
+        .error-msg {
+            display: none;
+            margin-top: 20px;
+            padding: 16px 24px;
+            background: rgba(130, 24, 8, 0.18);
+            border: 1px solid rgba(130, 24, 8, 0.40);
+            border-radius: 2px;
+            font-family: 'Crimson Pro', serif;
+            font-size: 15px;
+            color: #e09070;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        .error-msg.show {
+            display: block;
+        }
+
+        /* PROGRESS */
+        #progressSection {
+            display: none;
+            background: var(--soil);
+            padding: 56px 24px;
+            text-align: center;
+        }
+
+        #progressSection.show {
+            display: block;
+        }
+
+        .prog-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 20px;
+            color: var(--gold-lt);
+            margin-bottom: 36px;
+        }
+
+        .prog-track {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px;
+            max-width: 760px;
+            margin: 0 auto 32px;
+        }
+
+        .p-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .p-dot {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid var(--ink-fade);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 11px;
+            color: var(--ink-fade);
+            transition: all 0.45s ease;
+        }
+
+        .p-dot.active {
+            border-color: var(--amber);
+            color: var(--amber);
+            animation: pulse 1.4s ease-in-out infinite;
+        }
+
+        .p-dot.done {
+            background: var(--amber);
+            border-color: var(--amber);
+            color: var(--deep);
+            font-weight: 700;
+            animation: none;
+            box-shadow: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(192, 120, 40, 0.12), 0 0 12px rgba(192, 120, 40, 0.25); }
+            50% { box-shadow: 0 0 0 6px rgba(192, 120, 40, 0.22), 0 0 28px rgba(192, 120, 40, 0.45); }
+        }
+
+        .p-label {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 10px;
+            color: var(--ink-ghost);
+            white-space: nowrap;
+            max-width: 52px;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .p-line {
+            width: 24px;
+            height: 2px;
+            background: var(--ink-fade);
+            border-radius: 1px;
+            transition: background 0.45s;
+            margin-top: 19px;
+        }
+
+        .p-line.lit {
+            background: var(--amber);
+        }
+
+        .prog-status {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--parch3);
+            min-height: 28px;
+        }
+
+        .quill {
+            display: inline-block;
+            animation: sway 1.1s ease-in-out infinite;
+            margin-right: 6px;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        /* CHRONICLE */
+        #chronicle {
+            display: none;
+        }
+
+        #chronicle.show {
+            display: block;
+        }
+
+        /* Epigraph */
+        .epigraph-page {
+            background: #090604;
+            padding: 72px 24px 68px;
+            text-align: center;
+            border-bottom: 1px solid rgba(192, 120, 40, 0.15);
+        }
+
+        .epigraph-text {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: clamp(17px, 2.8vw, 22px);
+            color: var(--gold-lt);
+            max-width: 560px;
+            margin: 0 auto 16px;
+            line-height: 1.75;
+        }
+
+        .epigraph-attr {
+            font-family: 'Playfair Display', serif;
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--ink-ghost);
+        }
+
+        /* Chapters */
+        .ch-band {
+            position: relative;
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.85s ease, transform 0.85s ease;
+        }
+
+        .ch-band.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        .ch-band:nth-child(odd) {
+            background: var(--soil);
+        }
+
+        .ch-band:nth-child(even) {
+            background: #f0e5ca;
+            color: var(--ink);
+        }
+
+        .ch-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 48px 72px;
+            position: relative;
+        }
+
+        .ch-inner::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 48px;
+            bottom: 48px;
+            width: 3px;
+            background: linear-gradient(180deg, transparent, var(--amber) 40%, var(--amber) 60%, transparent);
+            opacity: 0.35;
+        }
+
+        .ch-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+
+        .ch-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--ink-ghost);
+        }
+
+        .ch-band:nth-child(even) .ch-num { color: var(--ink-fade); }
+
+        .ch-era {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 12px;
+            padding: 3px 12px;
+            border-radius: 20px;
+            color: var(--gold);
+            border: 1px solid rgba(192, 120, 40, 0.35);
+        }
+
+        .ch-band:nth-child(even) .ch-era { color: var(--ink-soft); border-color: rgba(74, 46, 16, 0.3); }
+
+        .ch-rule {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(192, 120, 40, 0.3), transparent);
+        }
+
+        .ch-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(20px, 3.5vw, 32px);
+            font-weight: 700;
+            line-height: 1.22;
+            margin-bottom: 28px;
+        }
+
+        .ch-band:nth-child(odd) .ch-title { color: var(--gold-lt); }
+        .ch-band:nth-child(even) .ch-title { color: var(--ink); }
+
+        .ch-body {
+            font-family: 'Crimson Pro', serif;
+            font-size: clamp(16.5px, 2vw, 18.5px);
+            line-height: 1.84;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .ch-band:nth-child(odd) .ch-body { color: #d4c4a0; }
+        .ch-band:nth-child(even) .ch-body { color: var(--ink-mid); }
+
+        .ch-body p {
+            margin-bottom: 20px;
+            text-indent: 2.4em;
+        }
+
+        .ch-body p:first-child { text-indent: 0; }
+
+        .ch-body p:first-child::first-letter {
+            font-family: 'Playfair Display', serif;
+            font-size: 78px;
+            font-weight: 700;
+            float: left;
+            line-height: 0.72;
+            padding-right: 10px;
+            padding-top: 8px;
+            color: var(--amber);
+        }
+
+        .ch-band:nth-child(even) .ch-body p:first-child::first-letter { color: var(--flame); }
+
+        .ch-divider {
+            height: 8px;
+            background: repeating-linear-gradient(90deg,
+                var(--kg) 0 10px,
+                var(--gold) 10px 20px,
+                var(--kr) 20px 30px,
+                var(--deep) 30px 40px
+            );
+            opacity: 0.55;
+        }
+
+        /* FINALE */
+        #finale {
+            display: none;
+            background: var(--bark);
+            padding: 88px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #finale.show { display: block; }
+
+        #finale::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(192, 120, 40, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .fin-stars {
+            font-size: 22px;
+            letter-spacing: 18px;
+            color: var(--gold);
+            opacity: 0.55;
+            margin-bottom: 28px;
+        }
+
+        .fin-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(18px, 3.5vw, 30px);
+            font-weight: 400;
+            color: var(--gold-lt);
+            max-width: 600px;
+            margin: 0 auto 24px;
+            line-height: 1.4;
+            position: relative;
+        }
+
+        .fin-body {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 16px;
+            color: var(--parch3);
+            max-width: 520px;
+            margin: 0 auto 40px;
+            line-height: 1.85;
+            position: relative;
+        }
+
+        .restart-btn {
+            display: inline-block;
+            padding: 12px 40px;
+            border: 1px solid var(--amber);
+            color: var(--amber);
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 16px;
+            cursor: pointer;
+            background: transparent;
+            border-radius: 2px;
+            transition: background 0.2s, color 0.2s;
+            position: relative;
+        }
+
+        .restart-btn:hover {
+            background: rgba(192, 120, 40, 0.12);
+            color: var(--gold-lt);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--deep);
+            padding: 20px 24px;
+            text-align: center;
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 12px;
+            color: var(--ink-fade);
+            letter-spacing: 0.07em;
+        }
+
+        /* CURSOR */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.05em;
+            background: var(--amber);
+            vertical-align: text-bottom;
+            margin-left: 1px;
+            animation: blink 0.75s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @media (max-width: 640px) {
+            .ch-inner { padding: 44px 24px 52px; }
+            .ch-body { font-size: 16.5px; }
+            .ch-body p:first-child::first-letter { font-size: 58px; }
+            .p-line { width: 12px; }
+            .p-label { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="kente"></div>
+
+    <header class="hero">
+        <p class="hero-eye">A Living Chronicle &middot; Written in One Breath</p>
+        <div class="hero-rule"><span>&#10022;</span></div>
+        <h1 class="hero-title">We Were Always<br><em>Destined to Be Here</em></h1>
+        <p class="hero-sub">A Chronicle of Origin, Survival, Betrayal, Becoming, and Destiny</p>
+        <p class="hero-desc">From the kingdoms of West Africa to the contested streets of a republic that never fully honored its own promise &mdash; the story of a people taken, tested, and refused to vanish.</p>
+    </header>
+
+    <section id="launchSection">
+        <p class="launch-prompt">
+            Press below to open the chronicle.
+            <small>Seven chapters. Nine acts of writing. One unbroken thread.</small>
+        </p>
+        <button class="begin-btn" id="beginBtn">
+            <span class="bi">&#128220;</span> Begin the Chronicle
+        </button>
+        <div class="error-msg" id="errorMsg"></div>
+    </section>
+
+    <section id="progressSection">
+        <p class="prog-title">The chronicle is being written&hellip;</p>
+        <div class="prog-track" id="progressTrack"></div>
+        <p class="prog-status" id="progressStatus"><span class="quill">&#9997;&#127999;</span> Preparing&hellip;</p>
+    </section>
+
+    <main id="chronicle"></main>
+
+    <section id="finale">
+        <div class="fin-stars">&#10022; &#10022; &#10022;</div>
+        <h2 class="fin-title" id="finaleTitle">&ldquo;Not despite America &mdash; through it, past it, and beyond it.&rdquo;</h2>
+        <p class="fin-body">This chronicle was written in one breath, drawn from centuries of testimony. Every obstacle named here was real. Every survival named here was an act of will. The story is not finished.</p>
+        <button class="restart-btn" onclick="location.reload()">Begin Anew</button>
+    </section>
+
+    <div class="kente"></div>
+    <footer class="footer">Written by Claude &middot; Anthropic &middot; In honor of the enduring</footer>
+
+    <script>
+        /* CHAPTER MANIFEST */
+        var CHAPTERS = [
+            { n: 1, title: "Before the Ships", era: "Ancient Africa – 1500s", brief: "The deep roots of African civilization before the transatlantic slave trade. The empires of Mali, Songhai, Ashanti, Yoruba, Great Zimbabwe, and Kongo; their advanced governance, trade networks reaching Europe and Asia, the scholarship of Timbuktu, art, music, cosmology, and agriculture. Show the fullness and sophistication of African life not as background context but as the first and foundational chapter of this story." },
+            { n: 2, title: "The Middle Passage", era: "1619 – 1750s", brief: "The transatlantic slave trade capture, the horror of the Middle Passage, the 1619 arrival in Virginia. How enslaved Africans were stripped of names, languages, homelands, and legal personhood; and how, despite all of this, they preserved cultural memory, kinship systems, spiritual practice, music, and resistance. Show the human beings inside the cargo, the survival strategies, the impossible grief, and the first roots put down in American soil." },
+            { n: 3, title: "Bondage and Resistance", era: "1750s – 1865", brief: "Slavery as the economic engine of the American republic. The contradiction of a freedom-declaring nation built entirely on enslaved Black labor. Show the full range of resistance: Nat Turner, Denmark Vesey, Harriet Tubman and the Underground Railroad, the literature of Frederick Douglass, the invisibility of everyday subversion. The Civil War, emancipation, and the truth that Black people fought and argued and wrote their way to legal freedom; it was not simply given." },
+            { n: 4, title: "Reconstruction, Betrayal, and the Long Terror", era: "1865 – 1920s", brief: "The brief extraordinary promise of Reconstruction: Black elected officials, schools, land, citizenship. Then the violent betrayal: the Compromise of 1877, Black Codes, convict leasing, Jim Crow, the epidemic of lynching, the Tulsa Race Massacre of 1921. How white backlash systematically dismantled Black progress and how American democracy was revealed as conditional. Yet show Black institution-building, HBCUs, the Black press, and the community structures that survived anyway." },
+            { n: 5, title: "The Great Migration and Harlem Renaissance", era: "1910s – 1940s", brief: "Six million Black Americans leave the Jim Crow South for the industrial North and West. The transformation of Chicago, Harlem, Detroit, Los Angeles. Langston Hughes, Zora Neale Hurston, Duke Ellington, Louis Armstrong. Jazz and blues as philosophies, not just music. The 'Double V' campaign during World War II: fighting fascism abroad while facing it at home. Black modernity, urbanity, style, and intellectual life as acts of radical self-definition." },
+            { n: 6, title: "The Civil Rights Movement and Its Betrayals", era: "1950s – 1980s", brief: "Brown v. Board, Rosa Parks, the Montgomery Bus Boycott, the March on Washington, MLK, SNCC, the Civil Rights and Voting Rights Acts. Then the backlash: COINTELPRO, FBI surveillance, the assassinations of King, Malcolm X, and Fred Hampton. Nixon’s Southern Strategy, Reagan’s War on Drugs as racial warfare. Show what was won, what was destroyed, and what remained undone: the persistence of structural inequality behind the curtain of legal equality." },
+            { n: 7, title: "Destiny", era: "1980s – Present", brief: "From the crack epidemic and mass incarceration to Barack Obama. From Trayvon Martin, Ferguson, and Black Lives Matter to George Floyd and a global reckoning. The racial wealth gap, health disparities, voter suppression; all ongoing. And yet the undeniable centrality of Black culture to American identity. Hip-hop as the dominant global music form. Black women as the backbone of American democracy. The final chapter must land on this truth: Black people were never incidental to America. They were always central. Their destiny here was forged through 400 years of refusal to be erased." }
+        ];
+
+        var NODELABELS = ["Invocation", "Outline", "Chapter I", "Chapter II", "Chapter III", "Chapter IV", "Chapter V", "Chapter VI", "Chapter VII", "Binding"];
+
+        var SYSTEM = "You are a masterful literary historian writing a definitive chronicle of African American history. Your prose is grounded, dignified, specific, and carries moral weight without being preachy. Write in plain paragraphs only; no markdown, no asterisks, no headers, no bullet points. Paragraphs separated by a single blank line. Show civilization, agency, resistance, creativity, and intellectual life alongside injustice. Never flatten this history into victimhood alone.";
+
+        /* API */
+        async function callClaude(messages, system) {
+            var body = {
+                model: "claude-3-5-sonnet-20240620",
+                max_tokens: 1000,
+                messages: messages
+            };
+            if (system) body.system = system;
+
+            return fetch('https://api.anthropic.com/v1/messages', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(body)
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.error) throw new Error(data.error.message);
+                if (!data.content || !data.content[0]) throw new Error("Empty response from API");
+                return data.content[0].text.trim();
+            });
+        }
+
+        /* PROGRESS */
+        function buildTrack() {
+            var track = document.getElementById('progressTrack');
+            track.innerHTML = '';
+            NODELABELS.forEach(function(label, i) {
+                var node = document.createElement('div');
+                node.className = 'p-node';
+                node.innerHTML = '<div class="p-dot" id="dot-' + i + '">' + (i === 0 ? '&#10022;' : (i)) + '</div>' +
+                                 '<div class="p-label">' + label + '</div>';
+                track.appendChild(node);
+                if (i < NODELABELS.length - 1) {
+                    var line = document.createElement('div');
+                    line.className = 'p-line';
+                    line.id = 'line-' + i;
+                    track.appendChild(line);
+                }
+            });
+        }
+
+        function dotActive(i) {
+            document.querySelectorAll('.p-dot').forEach(function(d) { d.classList.remove('active'); });
+            var d = document.getElementById('dot-' + i);
+            if (d) d.classList.add('active');
+        }
+
+        function dotDone(i) {
+            var d = document.getElementById('dot-' + i);
+            if (d) {
+                d.classList.remove('active');
+                d.classList.add('done');
+                d.innerHTML = '&#10003;';
+            }
+            var l = document.getElementById('line-' + i);
+            if (l) l.classList.add('lit');
+        }
+
+        function setStatus(msg) {
+            document.getElementById('progressStatus').innerHTML = '<span class="quill">&#9997;&#127999;</span> ' + msg;
+        }
+
+        /* RENDER */
+        function addEpigraph(epigraph, attr) {
+            var el = document.createElement('div');
+            el.className = 'epigraph-page';
+            el.innerHTML = '<p class="epigraph-text">&ldquo;' + esc(epigraph) + '&rdquo;</p>' +
+                           '<p class="epigraph-attr">&mdash; ' + esc(attr) + '</p>';
+            document.getElementById('chronicle').appendChild(el);
+        }
+
+        function addChapterShell(ch) {
+            var chronicle = document.getElementById('chronicle');
+            if (chronicle.children.length > 0) {
+                var div = document.createElement('div');
+                div.className = 'ch-divider';
+                chronicle.appendChild(div);
+            }
+            var band = document.createElement('section');
+            band.className = 'ch-band';
+            band.id = 'band-' + ch.n;
+            band.innerHTML = '<div class="ch-inner">' +
+                '<div class="ch-meta"><span class="ch-num">Chapter ' + ch.n + '</span><span class="ch-era">' + esc(ch.era) + '</span><span class="ch-rule"></span></div>' +
+                '<h2 class="ch-title">' + esc(ch.title) + '</h2>' +
+                '<div class="ch-body" id="body-' + ch.n + '"><p><span class="cursor"></span></p></div>' +
+                '</div>';
+            chronicle.appendChild(band);
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    band.classList.add('revealed');
+                });
+            });
+        }
+
+        function fillChapter(n, rawText) {
+            var container = document.getElementById('body-' + n);
+            if (!container) return;
+            var paras = rawText.split(/\n\s*\n/).map(function(p) { return p.replace(/\s+/g, ' ').trim(); }).filter(function(p) { return p.length > 0; });
+            container.innerHTML = paras.map(function(p) { return '<p>' + esc(p) + '</p>'; }).join('');
+        }
+
+        function esc(str) {
+            return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+                .replace(/\u2018|\u2019/g, "'").replace(/\u201c|\u201d/g, '"');
+        }
+
+        function sleep(ms) { return new Promise(function(r) { setTimeout(r, ms); }); }
+
+        /* MAIN */
+        async function runChronicle() {
+            var beginBtn = document.getElementById('beginBtn');
+            var launchSec = document.getElementById('launchSection');
+            var progressSec = document.getElementById('progressSection');
+            var chronicle = document.getElementById('chronicle');
+            var finale = document.getElementById('finale');
+            var errorMsg = document.getElementById('errorMsg');
+
+            beginBtn.disabled = true;
+            errorMsg.classList.remove('show');
+            launchSec.style.display = 'none';
+            progressSec.classList.add('show');
+
+            buildTrack();
+
+            try {
+                // Node 0: Invocation
+                dotActive(0);
+                setStatus("Invoking the chronicle&hellip;");
+                await sleep(700);
+                dotDone(0);
+
+                // Node 1: Outline
+                dotActive(1);
+                setStatus("Establishing the thematic arc&hellip;");
+                var outlineRaw = await callClaude([ { role: "user", content: "You will write a seven-chapter chronicle called 'We Were Always Destined to Be Here' about the origin, survival, and destiny of African Americans in the United States. Return ONLY a JSON object with: thematicThread (2-3 sentences: the single through-line of the entire chronicle), epigraph (a powerful quote, real or composed, to open the work), epigraphAttribution (the attributed speaker or source), closingQuote (a single sentence to anchor the finale). Return only valid JSON. No markdown. No backticks. No extra commentary." } ], SYSTEM);
+                var outline;
+                try { outline = JSON.parse(outlineRaw); }
+                catch(e) { outline = { thematicThread: "A people stolen from the world's oldest civilizations did not merely survive; they built, resisted, created, and became the moral conscience of a nation that feared them.", epigraph: "You have seen how a man was made a slave; you shall see how a slave was made a man.", epigraphAttribution: "Frederick Douglass", closingQuote: "Not despite America; through it, past it, and beyond it." }; }
+                dotDone(1);
+
+                chronicle.classList.add('show');
+                addEpigraph(outline.epigraph, outline.epigraphAttribution);
+
+                // Nodes 2-8: Chapters
+                var previousTail = "";
+                for (var i = 0; i < CHAPTERS.length; i++) {
+                    var ch = CHAPTERS[i];
+                    var nodeIdx = i + 2;
+                    dotActive(nodeIdx);
+                    setStatus("Writing Chapter " + ch.n + ": &ldquo;" + ch.title + "&rdquo;&hellip;");
+                    addChapterShell(ch);
+                    var band = document.getElementById('band-' + ch.n);
+                    if (band) band.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    var continuity = previousTail ? ("Previous chapter ended with: '" + previousTail + "'. Transition naturally.") : "";
+                    var prompt = "Thematic thread: " + outline.thematicThread + "\n\nWriting Chapter " + ch.n + " of 7.\nTitle: " + ch.title + "\nEra: " + ch.era + "\nMust cover: " + ch.brief + "\n" + continuity + "\n\nWrite 4-5 paragraphs of historically grounded literary prose. Plain paragraphs only. No headers.";
+                    
+                    var chText = await callClaude([ { role: "user", content: prompt } ], SYSTEM);
+                    fillChapter(ch.n, chText);
+                    
+                    var words = chText.trim().split(/\s+/);
+                    previousTail = words.slice(-60).join(" ");
+                    dotDone(nodeIdx);
+                    await sleep(150);
+                }
+
+                // Node 9: Binding
+                dotActive(9);
+                setStatus("Binding the chronicle&hellip;");
+                await sleep(900);
+                dotDone(9);
+
+                progressSec.classList.remove('show');
+                if (outline.closingQuote) document.getElementById('finaleTitle').textContent = "\u201c" + outline.closingQuote + "\u201d";
+                await sleep(400);
+                finale.classList.add('show');
+                finale.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            } catch(err) {
+                progressSec.classList.remove('show');
+                launchSec.style.display = 'block';
+                beginBtn.disabled = false;
+                errorMsg.textContent = "The chronicle was interrupted: " + err.message + ". Any completed chapters are preserved. Press 'Begin' to retry.";
+                errorMsg.classList.add('show');
+                window.scrollTo({ top: launchSec.offsetTop - 20, behavior: 'smooth' });
+            }
+        }
+
+        document.getElementById('beginBtn').addEventListener('click', runChronicle);
+    </script>
+</body>
+</html>
